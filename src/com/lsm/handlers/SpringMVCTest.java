@@ -1,15 +1,23 @@
 package com.lsm.handlers;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 @RequestMapping("/springmvc")
 @Controller
 public class SpringMVCTest {
     private static final String SUCCESS = "success";
+
+    /**
+     * @RequestHeader用法和@RequestParam相同  作用就是映射请求头信息
+     * @param al
+     * @return
+     */
+    @RequestMapping(value = "testRequestHeader")
+    public String testRequestHeader(@RequestHeader(value = "Accept-Language") String al){
+        System.out.println("testRequestHeader:"+al);
+        return SUCCESS;
+    }
 
     /**
      * @RequestParam 来映射请求参数
