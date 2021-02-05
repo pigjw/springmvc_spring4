@@ -9,6 +9,18 @@ public class SpringMVCTest {
     private static final String SUCCESS = "success";
 
     /**
+     * 了解
+     * @CookieValue 映射一个Cookie值 属性同 @RequestParam
+     * @param jsessionid
+     * @return
+     */
+    @RequestMapping(value = "testCookieValue")
+    public String testCookieValue(@CookieValue(value = "JSESSIONID") String jsessionid){
+        System.out.println("testCookieValue-jsessionid:"+jsessionid);
+        return SUCCESS;
+    }
+
+    /**
      * @RequestHeader用法和@RequestParam相同  作用就是映射请求头信息
      * @param al
      * @return

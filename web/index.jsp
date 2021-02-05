@@ -12,7 +12,9 @@
   </head>
   <body>
 
-
+  <br><br>
+  <a href="springmvc/testCookieValue">testCookieValue</a>
+  <br><br>
   <br><br>
   <a href="springmvc/testRequestHeader">testRequestHeader</a>
   <br><br>
