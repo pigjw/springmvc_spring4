@@ -4,11 +4,32 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @RequestMapping("/springmvc")
 @Controller
 public class SpringMVCTest {
     private static final String SUCCESS = "success";
+
+    /**
+     * @RequestParam 来映射请求参数
+     * value 值即为请求参数的参数名
+     * requird 该参数是否是必须的
+     * defaultvalue 该参数的默认值 默认值是必须的
+     * @param username
+     * @param age
+     * @return
+     */
+    @RequestMapping(value = "/testRequestParam")
+    public String testRequestParam(@RequestParam(value = "username") String username,
+                                   @RequestParam(value = "age",required = false,defaultValue = "0") int age ){
+        System.out.println("username:"+username+",age:"+age);
+        return SUCCESS;
+    }
+
+
+
+
 
     /**
      * Rest 风格的URL
