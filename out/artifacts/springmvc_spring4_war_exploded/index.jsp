@@ -10,7 +10,35 @@
   <head>
     <title>$Title$</title>
   </head>
+
   <body>
+
+
+  <!--
+    模拟修改操作
+    1.原始数据 1,lisiming,123456,857854781@qq.com,24
+    2.要求密码不能被修改
+    3.表单回显模拟操作 直接在表单填写对应的属性值
+  -->
+  <form action="springmvc/testModelAttribute" method="post">
+    <input type="hidden" name="id" value="1">
+    username: <input type="text" name="username" value="lisiming"/>
+    <br>
+    email: <input type="text" name="email" value="857854781@qq.com"/>
+    <br>
+    age: <input type="text" name="age" value="24"/>
+    <br>
+    <input type="submit" value="Submit"/>
+  </form>
+  <br><br>
+
+  <a href="springmvc/testSessionAttributes">testSessionAttributes</a>
+  <br><br>
+  <a href="springmvc/testMap">testMap</a>
+  <br><br>
+  <a href="springmvc/testModelAndView">testModelAndView</a>
+  <br><br>
+
   <a href="springmvc/testServletAPI">testServletAPI</a>
   <br><br>
 

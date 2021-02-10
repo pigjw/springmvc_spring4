@@ -8,7 +8,19 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <br><br>
+    requestSchool: ${requestScope.school}
+    <br><br>
+    sessionSchool: ${sessionScope.school}
+    <br><br>
+    requestUser: ${requestScope.user}
+    <br><br>
+    sessionUser: ${sessionScope.user}
+    <br><br>
+    names: ${requestScope.names}
+    <br><br>
+    <h4>Success Page</h4>
+    time ${requestScope.time}
 </head>
 <body>
     <h4>Success Page</h4>
