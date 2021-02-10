@@ -1,12 +1,37 @@
 package com.lsm.handlers;
 
+import com.sun.org.glassfish.gmbal.ParameterNames;
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+import entities.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 @RequestMapping("/springmvc")
 @Controller
 public class SpringMVCTest {
     private static final String SUCCESS = "success";
+
+    @RequestMapping("/testServletAPI")
+    public  String testServletAPI(HttpServletRequest httpServletRequest,
+                                  HttpServletResponse httpServletResponse){
+        System.out.println("testServletAPI, "+httpServletRequest+","+httpServletResponse);
+        return SUCCESS;
+    }
+
+    /**
+     * springmvc 会按请求的参数名和POJO属性名称进行自动匹配
+     * 自动为该对象填充属性值支持级联属性 pojo.city pojo.province
+     * @param user
+     * @return
+     */
+    @RequestMapping("/testPojo")
+    public String testPojo(User user){
+        System.out.println("testPojo:"+user);
+        return SUCCESS;
+    }
 
     /**
      * 了解

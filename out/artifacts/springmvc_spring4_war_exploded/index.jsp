@@ -11,7 +11,24 @@
     <title>$Title$</title>
   </head>
   <body>
+  <a href="springmvc/testServletAPI">testServletAPI</a>
+  <br><br>
 
+  <form action="springmvc/testPojo" method="post">
+    username: <input type="text" name="username">
+    <br>
+    password: <input type="password" name="password">
+    <br>
+    email: <input type="text" name="email">
+    <br>
+    age: <input type="text" name="age">
+    <br>
+    city: <input type="text" name="address.city">
+    <br>
+    province: <input type="text" name="address.province">
+    <br>
+    <input type="submit" name="Submit">
+  </form>
   <br><br>
   <a href="springmvc/testCookieValue">testCookieValue</a>
   <br><br>
